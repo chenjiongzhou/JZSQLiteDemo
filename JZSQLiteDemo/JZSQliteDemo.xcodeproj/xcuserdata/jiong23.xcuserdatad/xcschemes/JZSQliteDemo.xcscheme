@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A906203E1EAF99C600B32888"
-               BuildableName = "JZSQLiteDemo.app"
-               BlueprintName = "JZSQLiteDemo"
-               ReferencedContainer = "container:JZSQLiteDemo.xcodeproj">
+               BlueprintIdentifier = "A906206A1EB0F44100B32888"
+               BuildableName = "JZSQliteDemo.app"
+               BlueprintName = "JZSQliteDemo"
+               ReferencedContainer = "container:JZSQliteDemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,14 +28,24 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A90620831EB0F44100B32888"
+               BuildableName = "JZSQliteDemoTests.xctest"
+               BlueprintName = "JZSQliteDemoTests"
+               ReferencedContainer = "container:JZSQliteDemo.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A906203E1EAF99C600B32888"
-            BuildableName = "JZSQLiteDemo.app"
-            BlueprintName = "JZSQLiteDemo"
-            ReferencedContainer = "container:JZSQLiteDemo.xcodeproj">
+            BlueprintIdentifier = "A906206A1EB0F44100B32888"
+            BuildableName = "JZSQliteDemo.app"
+            BlueprintName = "JZSQliteDemo"
+            ReferencedContainer = "container:JZSQliteDemo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +65,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A906203E1EAF99C600B32888"
-            BuildableName = "JZSQLiteDemo.app"
-            BlueprintName = "JZSQLiteDemo"
-            ReferencedContainer = "container:JZSQLiteDemo.xcodeproj">
+            BlueprintIdentifier = "A906206A1EB0F44100B32888"
+            BuildableName = "JZSQliteDemo.app"
+            BlueprintName = "JZSQliteDemo"
+            ReferencedContainer = "container:JZSQliteDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +84,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A906203E1EAF99C600B32888"
-            BuildableName = "JZSQLiteDemo.app"
-            BlueprintName = "JZSQLiteDemo"
-            ReferencedContainer = "container:JZSQLiteDemo.xcodeproj">
+            BlueprintIdentifier = "A906206A1EB0F44100B32888"
+            BuildableName = "JZSQliteDemo.app"
+            BlueprintName = "JZSQliteDemo"
+            ReferencedContainer = "container:JZSQliteDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
