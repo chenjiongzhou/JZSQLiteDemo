@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "JZSqliteTool.h"
 
 @interface JZSQliteDemoTests : XCTestCase
 
@@ -25,10 +26,25 @@
 }
 
 - (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    NSString *sql = @"create table if not exists t_stu(id integer primary key autoincrement, name text not null, age integer, score real)";
+    
+    BOOL result = [JZSqliteTool deal:sql uid:nil];
+    XCTAssertEqual(result, YES);
+    
+    
+    
 }
 
+- (void)testQuery {
+    
+    NSString *sql = @"select * from t_stu";
+    NSMutableArray *result = [JZSqliteTool querySql:sql uid:nil];
+    
+    NSLog(@"%@", result);
+    
+    
+}
 - (void)testPerformanceExample {
     // This is an example of a performance test case.
     [self measureBlock:^{
