@@ -16,6 +16,7 @@
 		A90620891EB0F44100B32888 /* JZSQliteDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A90620881EB0F44100B32888 /* JZSQliteDemoTests.m */; };
 		A90620951EB0F46700B32888 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A90620941EB0F46700B32888 /* libsqlite3.0.tbd */; };
 		A90620991EB0F48300B32888 /* JZSqliteTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A90620981EB0F48300B32888 /* JZSqliteTool.m */; };
+		A9D36F4C1EB3893100128755 /* JZSqliteModelTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D36F4B1EB3893100128755 /* JZSqliteModelTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,8 @@
 		A90620941EB0F46700B32888 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		A90620971EB0F48300B32888 /* JZSqliteTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZSqliteTool.h; sourceTree = "<group>"; };
 		A90620981EB0F48300B32888 /* JZSqliteTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZSqliteTool.m; sourceTree = "<group>"; };
+		A9D36F4A1EB3893100128755 /* JZSqliteModelTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZSqliteModelTool.h; sourceTree = "<group>"; };
+		A9D36F4B1EB3893100128755 /* JZSqliteModelTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZSqliteModelTool.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +135,8 @@
 			children = (
 				A90620971EB0F48300B32888 /* JZSqliteTool.h */,
 				A90620981EB0F48300B32888 /* JZSqliteTool.m */,
+				A9D36F4A1EB3893100128755 /* JZSqliteModelTool.h */,
+				A9D36F4B1EB3893100128755 /* JZSqliteModelTool.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -238,6 +243,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9D36F4C1EB3893100128755 /* JZSqliteModelTool.m in Sources */,
 				A90620761EB0F44100B32888 /* ViewController.m in Sources */,
 				A90620991EB0F48300B32888 /* JZSqliteTool.m in Sources */,
 				A90620731EB0F44100B32888 /* AppDelegate.m in Sources */,
@@ -436,6 +442,7 @@
 				A906208F1EB0F44100B32888 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A90620901EB0F44100B32888 /* Build configuration list for PBXNativeTarget "JZSQliteDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -444,6 +451,7 @@
 				A90620921EB0F44100B32888 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
