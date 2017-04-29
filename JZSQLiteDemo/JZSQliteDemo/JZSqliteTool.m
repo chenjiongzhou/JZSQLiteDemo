@@ -88,25 +88,56 @@ sqlite3 *ppDb = nil;
     return rowDicArray;
 }
 
++ (BOOL)dealSqls:(NSArray <NSString *>*)sqls uid:(NSString *)uid {
+    
+    if (![self openDB:uid]) {
+        NSLog(@"打开数据库失败, 请重新尝试");
+        return NO;
+    }
+    NSString *begin = @"begin transaction";
+    sqlite3_exec(ppDb, begin.UTF8String, nil, nil, nil);
+    
+    for (NSString *sql in sqls) {
+        BOOL result = sqlite3_exec(ppDb, sql.UTF8String, nil, nil, nil) == SQLITE_OK;
+        if (result == NO) {
+            NSString *rollBack = @"rollback transaction";
+            sqlite3_exec(ppDb, rollBack.UTF8String, nil, nil, nil);
+            [self closeDB];
+            return NO;
+        }
+    }
+
+    NSString *commit = @"commit transaction";
+    sqlite3_exec(ppDb, commit.UTF8String, nil, nil, nil);
+    [self closeDB];
+    return YES;
+}
 
 + (BOOL)openDB:(NSString *)uid {
-
     NSString *dbName = @"common.sqlite";
     if (uid.length != 0) {
-        dbName = [NSString stringWithFormat:@"%@.sqlite",uid];
+        dbName = [NSString stringWithFormat:@"%@.sqlite", uid];
     }
+    NSString *dbPath = [kCachePath stringByAppendingPathComponent:dbName];
     
-    NSString *dbPath = [kCachePath stringByAppendingString:dbName];
-    
-    return sqlite3_open(dbPath.UTF8String, &ppDb) == SQLITE_OK;
+    return  sqlite3_open(dbPath.UTF8String, &ppDb) == SQLITE_OK;
     
 }
 
-
-
 + (void)closeDB {
-    
     sqlite3_close(ppDb);
+}
+
++ (void)beginTransaction:(NSString *)uid {
+    [self deal:@"begin transaction" uid:uid];
+}
+
++ (void)commitTransaction:(NSString *)uid {
+    [self deal:@"commit transaction" uid:uid];
+}
+
++ (void)rollBackTransaction:(NSString *)uid {
+    [self deal:@"rollback transaction" uid:uid];
 }
 
 
